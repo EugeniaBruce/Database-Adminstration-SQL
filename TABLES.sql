@@ -18,7 +18,7 @@ last_login TIMESTAMP);
 CREATE TABLE job (job_id SERIAL PRIMARY KEY,
 job_name VARCHAR(200) UNIQUE NOT NULL);
 
---Create a third table referencing job and account table
+--Create a third table referencing a foreign key
 
 CREATE TABLE account_job(user_id INTEGER REFERENCES account(user_id),
 job_id INTEGER REFERENCES job(job_id),
@@ -30,9 +30,11 @@ INSERT INTO account (username,password,email,created_on)
 VALUES
 ('Jones','Welcome','Jones@gmail.com', CURRENT_TIMESTAMP);
 
-INSERT INTO account_job(user_id,job_id,hire_date)
+--Insert data into reference column
+
+INSERT INTO account_job(user_id,job_id)
 VALUES
-(1,1,CURRENT_TIMESTAMP);
+(1,1);
 
 --Update records in account table 
 
