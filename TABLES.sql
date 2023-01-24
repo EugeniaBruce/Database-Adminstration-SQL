@@ -77,4 +77,3 @@ hiredate DATE CHECK (hiredate > birthdate),
 SALARY INTEGER CHECK (salary >0));
 
 
-	
