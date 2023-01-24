@@ -41,7 +41,7 @@ VALUES
 UPDATE account 
 SET last_login = CURRENT_TIMESTAMP;
 
---Update records 
+--Update input in account_job table based on account table 
 
 UPDATE account_job
 SET hire_date = account.created_on
@@ -68,7 +68,7 @@ ALTER COLUMN email DROP NOT NULL;
 ALTER TABLE account 
 DROP COLUMN last_login;
 
-Create a table using CHECK constraint
+--Create an employee table using CHECK constraint
 
 CREATE TABLE employees(emp_id SERIAL PRIMARY KEY,
 first_name VARCHAR(50) NOT NULL,
