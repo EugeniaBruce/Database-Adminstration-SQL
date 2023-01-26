@@ -76,4 +76,5 @@ last_name VARCHAR(50) NOT NULL, birthdate DATE CHECK (birthdate >'1900-01-01'),
 hiredate DATE CHECK (hiredate > birthdate),
 SALARY INTEGER CHECK (salary >0));
 
+--Disclaimer: Part of a vitual SQL bootcamp hosted by Udemy
 
